@@ -13,4 +13,7 @@ public abstract class Employee extends Customer implements Discountable {
     public void printEmployeePriceAfterDiscount(Clothing clothes){
         System.out.println("After Employee Discount : " + calculateDiscountPrice(clothes, discount));
     }
+    public double getDiscount(){
+        return discount;
+    }
 }

@@ -32,8 +32,8 @@ public class Main {
         discountablePeople[1]=employee;
         discountablePeople[2]=student;
 
-        System.out.println("The hourly employee's cart is " + Shop.calulcateTotal(manager.getClothingList()) + "\nAfter discount it is : " + Shop.printDiscountAmountOff(x));
-
+        System.out.println("The hourly employee's cart is " + Shop.calulcateTotal(manager.getClothingList()) + "\nAfter discount it is : " );
+        Shop.printDiscountAmountOff(discountablePeople,buttonUp);
 
     }
 

@@ -14,20 +14,29 @@ public class Shop {
         return x.getBodySize().equals(y.getSize());
     }
     public static void printDiscountAmountOff(Discountable[] x, Clothing y){
-        //Get x class then get the discount
-        //get y price
+        //gets discount from object
+        //multiplies discount * price
+        //prints the result because it is the amount off
+        for(Discountable discountedCustomer : x){
+            x.getClass()
+        }
 
     }
     public static void sortAndPrintClothingByPrice(ArrayList<Clothing> x){
+        ArrayList<Clothing> newList = new ArrayList<>();
         double highestPrice=x.get(0).getPrice();
-        Clothing swapClothes;
+        Clothing addThis=x.get(0);
         for(int i = 0; i<x.size();i++){
             for(int j = i; j<x.size();j++){
                 if(highestPrice<x.get(j).getPrice()){
                     highestPrice=x.get(j).getPrice();
-                    
+                    addThis=x.get(j);
                 }
             }
+            newList.add(addThis);
+        }
+        for(Clothing clothes : newList){
+            System.out.println(clothes.getDescription() + " : "+ clothes.getPrice();
         }
     }
 }

@@ -7,4 +7,5 @@ public abstract class Customer extends Person {
     public void printCustomerName(Customer x){
         System.out.println("The customer name is : " + x.getName());
     }
+
 }

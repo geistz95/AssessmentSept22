@@ -13,4 +13,7 @@ public class Student extends Person implements Discountable {
     public double calculateDiscountPrice(Clothing clothes, double discount) {
         return clothes.getPrice() - (clothes.getPrice()*discount);
     }
+    public double getDiscount(){
+        return discount;
+    }
 }
