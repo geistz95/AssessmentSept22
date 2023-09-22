@@ -31,9 +31,14 @@ public class Main {
         discountablePeople[0]=manager;
         discountablePeople[1]=employee;
         discountablePeople[2]=student;
+        ArrayList<Clothing> clothingSelection = new ArrayList<>();
+        clothingSelection.add(buttonUp);
+        clothingSelection.add(tShirt);
+        clothingSelection.add(jeans);
 
         System.out.println("The hourly employee's cart is " + Shop.calulcateTotal(manager.getClothingList()) + "\nAfter discount it is : " );
         Shop.printDiscountAmountOff(discountablePeople,buttonUp);
+        Shop.sortAndPrintClothingByPrice(clothingSelection);
 
     }
 
