@@ -1,5 +1,6 @@
 package Store;
 
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 
 public class Shop {
@@ -18,7 +19,13 @@ public class Shop {
         //multiplies discount * price
         //prints the result because it is the amount off
         for(Discountable discountedCustomer : x){
-            x.getClass()
+            if(discountedCustomer instanceof Manager){
+                System.out.println("The discount for a manager is : " + ((Manager) discountedCustomer).getDiscount()*y.getPrice());
+            }else if (discountedCustomer instanceof Employee){
+                System.out.println("The discount for a regular employee is : " + ((HourlyEmployee) discountedCustomer ).getDiscount()* y.getPrice());
+            }else{
+                System.out.println("THe discount for a student is : "+ ((Student)discountedCustomer).getDiscount()*y.getPrice());
+            }
         }
 
     }
