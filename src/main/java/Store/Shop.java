@@ -2,6 +2,8 @@ package Store;
 
 import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Shop {
     public static double calulcateTotal(Clothing[] clothes){
@@ -30,19 +32,8 @@ public class Shop {
 
     }
     public static void sortAndPrintClothingByPrice(ArrayList<Clothing> x){
-        ArrayList<Clothing> newList = new ArrayList<>();
-        double highestPrice=x.get(0).getPrice();
-        Clothing addThis=x.get(0);
-        for(int i = 0; i<x.size();i++){
-            for(int j = i; j<x.size();j++){
-                if(highestPrice<x.get(j).getPrice()){
-                    highestPrice=x.get(j).getPrice();
-                    addThis=x.get(j);
-                }
-            }
-            newList.add(addThis);
-        }
-        for(Clothing clothes : newList){
+        x.sort(Comparator.comparingDouble(Clothing::getPrice));
+        for(Clothing clothes : x){
             System.out.println(clothes.getDescription() + " : "+ clothes.getPrice());
         }
     }

@@ -1,6 +1,6 @@
 package Store;
 
-public class Manager extends Employee implements Discountable{
+public class Manager extends Employee {
     private final double discount=.15;
 
     public Manager(String name, Size bodySize, Clothing[] clothes) {

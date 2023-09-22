@@ -1,6 +1,6 @@
 package Store;
 
-public class Student extends Person implements Discountable {
+public class Student extends Customer {
     private long studentID;
     private  final double discount = .5;
 

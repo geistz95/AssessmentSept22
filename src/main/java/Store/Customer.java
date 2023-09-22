@@ -1,6 +1,6 @@
 package Store;
 
-public abstract class Customer extends Person {
+public abstract class Customer extends Person implements Discountable{
     public Customer(String name, Size bodySize, Clothing[] clothes) {
         super(name, bodySize, clothes);
     }

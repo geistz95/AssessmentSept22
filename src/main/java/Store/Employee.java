@@ -1,6 +1,6 @@
 package Store;
 
-public abstract class Employee extends Customer implements Discountable {
+public abstract class Employee extends Customer {
     private final double discount = .1;
     public Employee(String name, Size bodySize, Clothing[] clothes) {
         super(name, bodySize, clothes);
