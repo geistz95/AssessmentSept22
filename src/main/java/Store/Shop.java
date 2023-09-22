@@ -43,7 +43,7 @@ public class Shop {
             newList.add(addThis);
         }
         for(Clothing clothes : newList){
-            System.out.println(clothes.getDescription() + " : "+ clothes.getPrice();
+            System.out.println(clothes.getDescription() + " : "+ clothes.getPrice());
         }
     }
 }
